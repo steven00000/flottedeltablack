@@ -1,0 +1,270 @@
+body {
+    margin: 0; /* Supprimer les marges par défaut */
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+    background-color: #2f2f4d;
+    line-height: 1.6; /* Hauteur de ligne */
+    color: #fff; /* Couleur de texte par défaut */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    transition:0.3s ease;
+    z-index: 9999; /* Assurez-vous que la navbar reste au-dessus du contenu */
+}
+
+/* Style des liens de la barre de navigation */
+.navbar .links {
+    display: flex; /* Afficher les liens en ligne */
+    justify-content: center; /* Centrer horizontalement */
+    transition: 0.3s;
+}
+
+.navbar .links a:hover{
+    color: #ddd;
+    background-color: #5f5f9e;
+}
+
+.navbar .links a {
+    border-radius: 1px;
+    text-shadow: 0px 0px 40px rgba(64, 75, 170, 0.5);
+    height: 2px;
+    box-shadow: 0px 0px 40px rgba(64, 75, 170, 0.5);
+    background-color: #3c3c63;
+    transition: 1s;
+    color: #fff; /* Couleur du texte blanc */
+    margin: 0 10px; /* Marge entre les liens */
+    text-decoration: none; /* Supprimer la décoration des liens */
+}
+
+
+
+
+
+/* Style de la section d'accueil */
+.Acceuil {
+    display: flex; /* Affichage en mode flexbox */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100vh; /* Prendre toute la hauteur de la fenêtre visible */
+    background-color: #2f2f4d; /* Image de fond */
+    background-size: cover; /* Redimensionner l'image pour couvrir la section */
+    background-position: center; /* Centrer l'image */
+    text-align: center; /* Centrer le texte */
+    color: #fff; /* Couleur du texte blanc */
+    margin-top: 20px;
+}
+
+.Acceuil .logo img {
+    cursor: grab;
+    border-radius: 100%;
+    box-shadow: 3px 3px 50px rgba(64, 75, 170, 0.5); /* Ajoute une ombre à l'image */
+    animation: moveImage 10s infinite linear;
+}
+
+@keyframes moveImage {
+    0%, 100% {
+        transform: rotateY(0deg); /* Position de départ et d'arrivée */
+    }
+    50% {
+        transform: rotateY(360deg); /* Position à mi-chemin */
+    }
+}
+
+
+
+/* Style des cartes d'informations */
+.informations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 50px;
+    text-align: center;
+    flex: 1 1 20%; /* Répartit l'espace équitablement entre les cartes */
+    align-items: center;
+    font-size: 120%;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: #2f2f4d; /* Couleur de fond bleu foncé */
+    border: 1px solid #000; /* Bordure des cartes */
+    padding: 30px;
+    margin-bottom: 20px; /* Marge entre les cartes */
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.5s;
+    text-decoration: none; /* Enlever la décoration des liens dans les cartes */
+    box-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5); /* Ajoute une ombre aux cartes */
+}
+.card:hover {
+    background-color: #3c3c63;
+}
+
+.card h2 {
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.card ul {
+    list-style: none; /* Supprime les puces de la liste */
+}
+
+.card ul li {
+    text-decoration: none; /* Supprime la décoration des liens à l'intérieur de la liste */
+}
+
+.card ul li a {
+    text-decoration: none; /* Supprime la décoration des liens à l'intérieur de la liste */
+    color: #fff; /* Réinitialise la couleur du texte à sa valeur par défaut */
+    transition: 0.2s;
+}
+.card ul li a:hover {
+    color: #555; /* Réinitialise la couleur du texte à sa valeur par défaut */
+}
+
+.separation {
+    font-size: 20px;
+    text-overflow: clip;
+    color: #eee;
+    text-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5);
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 500px;
+    height: 2px; /* Hauteur de la séparation */
+    background-color: #3c3c63; /* Couleur de la séparation */
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5);
+    animation: moveSeparator 4s infinite linear; /* Utilisation de linear pour une progression linéaire */
+}
+
+@keyframes moveSeparator {
+    0%, 100% {
+        left: calc(38% - 150px); /* Position de départ et d'arrivée */
+    }
+    50% {
+        left: calc(50% - 150px); /* Position à mi-chemin */
+    }
+}
+
+
+
+
+.boutique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.grade {
+    cursor: pointer;
+    flex: 0 1 30%;
+    background-color: #2f2f4d;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5);
+    transition: 0.5s;
+}
+.grade:hover {
+    background-color: #3c3c63;
+}
+
+.grade h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.grade p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.grade button {
+    background-color: #3c3c63;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grade button:hover {
+    background-color: #4e4e94;
+}
+
+
+.staff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.staff-member {
+    opacity: 1; /* Opacité initiale pour les membres du personnel */
+    margin-top: 50px;
+    text-align: center;
+    flex: 1 1 25%; /* Répartit l'espace équitablement entre les membres du staff */
+    align-items: center;
+    font-size: 120%;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: #2f2f4d; /* Couleur de fond bleu foncé */
+    border: 1px solid #000; /* Bordure des membres du staff */
+    padding: 30px;
+    margin-bottom: 30px; /* Marge entre les membres du staff */
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: 0.5s;
+    text-decoration: none; /* Enlever la décoration des liens dans les membres du staff */
+    box-shadow: 0px 0px 10px rgba(64, 75, 170, 0.5); /* Ajoute une ombre aux membres du staff */
+}
+
+.staff-member.active {
+    opacity: 1; /* Opacité maximale pour le membre du personnel sélectionné */
+}
+
+.staff-member:hover {
+    transform: translateY(-5px);
+}
+
+.staff-member h2 {
+    margin-bottom: 10px;
+}
+
+.staff-member p {
+    margin-bottom: 0;
+}
+
+.staff-member img {
+    width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+    height: 100px;
+    border-radius: 50%; /* Pour un effet d'avatar rond */
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .staff-member {
+        flex-basis: 100%; /* Changer la largeur à 100% pour afficher en colonne sur les écrans plus petits */
+    }
+}
