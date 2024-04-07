@@ -4,6 +4,7 @@ body {
     background-color: #2f2f4d;
     line-height: 1.6; /* Hauteur de ligne */
     color: #fff; /* Couleur de texte par défaut */
+    transition: 0.5s;
 }
 
 html {
